@@ -1,4 +1,3 @@
-import "./styles.css";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -7,19 +6,35 @@ const Container = styled.div`
 `;
 
 const Heading = styled.div`
-  color: red;
-  font-weight: bolder;
+  /* color: red; */
+  /* font-weight: bolder; */
+  display: flex;
+  background-color: blue;
+  color: white;
+  
+  font-family: sans-serif;
+  padding: 1rem 2rem;
+}
 `;
 
 const Paragraph = styled.div`
   font-size: 44px;
 `;
 
+const Button = styled.button`
+  color: red;
+  background-color: blue
+`;
+
 export default function App() {
+  const handleClick = () => {
+    alert('Button Clicked!');
+  }
   return (
     <Container>
-      <Heading>Hello CodeSandbox</Heading>
-      <Paragraph>Start editing to see some magic happen!</Paragraph>
+      <Heading>Heading</Heading>
+      <Paragraph>Hello World</Paragraph>
+      <Button onClick={handleClick}>Click me</Button>
     </Container>
   );
 }
